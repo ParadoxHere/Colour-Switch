@@ -1,0 +1,4 @@
+[Game Maker Tutorial] How to make Colour Switch [P1] Creating The Player
+[Game Maker Tutorial] How to make Colour Switch [P2] Creating The Obstacles
+[Game Maker Tutorial] How to make Colour Switch [P3] Creating The Level Manager
+[Game Maker Tutorial] How to make Colour Switch [P4] Creating The GUI, View and Score System
