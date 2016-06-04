@@ -32,7 +32,9 @@ hspd = 0;
 vspd = 0;
 grav = .4;
 
-colour = c_white;
+colour = choose(yellow, blue, pink, purple);
+
+start = false;
 </string>
           </argument>
         </arguments>
@@ -55,19 +57,53 @@ colour = c_white;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(vspd &lt; 10) {
-    vspd += grav;
-}
-
-jump = keyboard_check_pressed(vk_space);
-
-if(jump) {
-    vspd = -jspd;
-}
-
+            <string>jump = keyboard_check_pressed(vk_space);
 image_blend = colour;
 
-check_collision();
+if(jump) {
+    start = true;
+}
+
+if(start) {
+    if(vspd &lt; 10) {
+        vspd += grav;
+    }
+    
+    if(jump) {
+        vspd = -jspd;
+    }
+    
+    
+    
+    check_collision();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="Switch">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>colour = choose(yellow, blue, pink, purple);
+
+with(other) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -92,33 +128,6 @@ check_collision();
             <kind>1</kind>
             <string>if(other.colour != colour) {
     game_restart();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="Switch">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>colour = choose(red, blue, pink, purple);
-
-with(other) {
-    instance_destroy();
 }
 </string>
           </argument>

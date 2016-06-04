@@ -10,6 +10,7 @@
     <sprite>sprites\spr_spin_1</sprite>
     <sprite>sprites\spr_base_spin</sprite>
     <sprite>sprites\spr_switch</sprite>
+    <sprite>sprites\spr_spin_2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -19,12 +20,19 @@
   <objects name="objects">
     <object>objects\Player</object>
     <object>objects\BaseSolid</object>
-    <object>objects\BaseSpin</object>
-    <object>objects\BaseSpinPart</object>
     <object>objects\Switch</object>
-    <objects name="Spin 1">
-      <object>objects\Spin1</object>
-      <object>objects\Spin1Part</object>
+    <object>objects\View</object>
+    <objects name="Spinny Thing">
+      <object>objects\BaseSpin</object>
+      <object>objects\BaseSpinPart</object>
+      <objects name="Spin 1">
+        <object>objects\Spin1</object>
+        <object>objects\Spin1Part</object>
+      </objects>
+      <objects name="Spin 2">
+        <object>objects\Spin2</object>
+        <object>objects\Spin2Part</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
