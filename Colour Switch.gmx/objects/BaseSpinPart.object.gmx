@@ -52,6 +52,11 @@ colour = c_white;
             <kind>1</kind>
             <string>image_angle += rot_speed;
 image_blend = colour;
+
+if(y &gt; (view_yview[0] + view_hview[0]) + (sprite_height / 2)) {  
+    LevelManager.current_spinny_things--; 
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

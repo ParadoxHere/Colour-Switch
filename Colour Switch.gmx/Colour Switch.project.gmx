@@ -16,12 +16,15 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\check_collision.gml</script>
+    <script>scripts\die.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\Switch</object>
     <object>objects\Player</object>
     <object>objects\BaseSolid</object>
-    <object>objects\Switch</object>
     <object>objects\View</object>
+    <object>objects\GUI</object>
+    <object>objects\LevelManager</object>
     <objects name="Spinny Thing">
       <object>objects\BaseSpin</object>
       <object>objects\BaseSpinPart</object>
@@ -36,6 +39,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_boot</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

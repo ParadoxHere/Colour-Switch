@@ -645,11 +645,12 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="4">
+    <constants number="5">
       <constant name="yellow">make_color_rgb(246, 223, 14)</constant>
       <constant name="blue">make_color_rgb(53, 226, 242)</constant>
       <constant name="purple">make_color_rgb(140, 19, 251)</constant>
       <constant name="pink">make_color_rgb(255, 0, 128)</constant>
+      <constant name="save">"Save.sav"</constant>
     </constants>
   </ConfigConstants>
 </Config>
